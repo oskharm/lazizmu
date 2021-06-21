@@ -1,0 +1,26 @@
+<mat-toolbar style="background: #FFC107;height: 80px">
+    <img style="width: 70px; height: 60px;" src="./assets/lazizmu.png"> 
+    <pre flex style="padding-left: 20px; margin: 1px;">Sistem Informasi Manajemen 
+Kepegawaian</pre><br>
+</mat-toolbar>
+
+<mat-toolbar style="background: #F8F9FA; height: 80px">
+  <img style="width: 50px; height: 50px;" src="./assets/47.png"> 
+  <pre style="padding-left: 20px">Sita Rahmi
+HRD R&D</pre>
+    <button mat-button [matMenuTriggerFor]="menu" style="padding-left: 40px;">Beranda</button>
+      <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="menu">Aktivitas</button>
+    <mat-menu #menu="matMenu">
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="menu">Presensi</button>
+  <mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+</mat-toolbar>

@@ -6,20 +6,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './Auth/login/login.component';
 import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.component';
+import { BerandaAmilComponent } from './User/amil/beranda-amil/beranda-amil.component';
 
 import { MatSliderModule } from '@angular/material/slider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';``
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
+import {FormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AmilComponent } from './User/amil/amil.component';
+
 var firebaseConfig = {
   apiKey: "AIzaSyCdbHPwdRjEL3bY7WTrl-bQY1zp-QLiG2M",
   authDomain: "simpeglazizmu.firebaseapp.com",
@@ -35,7 +38,7 @@ var firebaseConfig = {
     AppComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    AmilComponent
+    BerandaAmilComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,9 @@ var firebaseConfig = {
     AngularFirestoreModule,
     FormsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule, 
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

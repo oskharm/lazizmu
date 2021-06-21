@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './Auth/login/login.component';
 import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.component';
-import { AmilComponent } from './User//amil/amil.component';
+import { BerandaAmilComponent } from './User/amil/beranda-amil/beranda-amil.component';
 
 import { AngularFireAuthGuard, hasCustomClaim, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['/login']);
@@ -19,12 +19,12 @@ const routes: Routes = [
     
   },
   {
-    path : 'forgotpassword',
+    path : 'forgot-password',
     component : ForgotPasswordComponent,
   },
   {
-    path : 'amil',
-    component : AmilComponent,
+    path : 'beranda-amil',
+    component : BerandaAmilComponent,
     canActivate: [AngularFireAuthGuard], 
     data: { authGuardPipe:  redirectUnauthorizedToLogin}
   }
