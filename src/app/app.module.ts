@@ -6,7 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './Auth/login/login.component';
 import { ForgotPasswordComponent } from './Auth/forgot-password/forgot-password.component';
-import { BerandaAmilComponent } from './User/amil/beranda-amil/beranda-amil.component';
+import { AmilComponent } from './User/amil/amil.component';
+import { BerandaAdminComponent } from './User/admin/beranda-admin/beranda-admin.component';
+import { ProfileComponent, DialogEdit} from './User/amil/profile/profile.component';
+import { PresensiMasukComponent, DialogTambahData } from './User/amil/presensi/presensi-masuk/presensi-masuk.component';
+import { PresensiPulangComponent, DialogTambah } from './User/amil/presensi/presensi-pulang/presensi-pulang.component';
+import { DataPresensiComponent } from './User/amil/presensi/data-presensi/data-presensi.component';
 
 import { MatSliderModule } from '@angular/material/slider';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -18,10 +23,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
+import {ScrollingModule} from '@angular/cdk/scrolling';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatListModule} from '@angular/material/list';
+
 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 
 var firebaseConfig = {
   apiKey: "AIzaSyCdbHPwdRjEL3bY7WTrl-bQY1zp-QLiG2M",
@@ -38,7 +48,16 @@ var firebaseConfig = {
     AppComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    BerandaAmilComponent
+    AmilComponent,
+    BerandaAdminComponent,
+    ProfileComponent,
+    PresensiMasukComponent,
+    PresensiPulangComponent,
+    DataPresensiComponent,
+    DialogEdit,
+    DialogTambah,
+    DialogTambahData,
+
   ],
   imports: [
     BrowserModule,
@@ -56,7 +75,10 @@ var firebaseConfig = {
     MatToolbarModule,
     MatIconModule,
     MatCardModule, 
-    MatMenuModule
+    MatMenuModule,
+    ScrollingModule,
+    MatDialogModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

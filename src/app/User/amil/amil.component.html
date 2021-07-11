@@ -1,0 +1,28 @@
+<mat-toolbar style="background: #FFC107;height: 80px">
+    <img style=" width :70px; height: 60px;" src="./assets/lazizmu.png"> 
+    <pre flex style="padding-left: 20px; margin: 1px;">Sistem Informasi Manajemen 
+Kepegawaian</pre><br>
+</mat-toolbar>
+
+<mat-toolbar style="background: #F8F9FA; height: 80px">
+  <img style="width: 50px; height: 50px;" src="./assets/47.png"> 
+  <pre style="padding-left: 20px; font-size: 13px; margin-bottom: 1em;" *ngFor="let item of Dataamil">{{item.nama}}
+{{item.Jabatan}}</pre>
+  <div class="navbar">
+    <button mat-button  style="margin-left: 60px; width: 120px;">Beranda</button>
+     
+    <button mat-button style="width: 120px;" >Aktivitas</button>
+
+      <button mat-button [matMenuTriggerFor]="presensi"style="width: 120px;">Presensi</button>
+      <mat-menu #presensi="matMenu">
+        <button  button mat-menu-item routerLink="/amil/presensi-masuk">Presensi Masuk</button>
+        <button mat-menu-item routerLink="/amil/presensi-pulang">Presensi Pulang</button>
+        <button mat-menu-item routerLink="/amil/data-presensi">Data Presensi Pribadi</button>
+      </mat-menu>
+      
+    <button mat-button routerLink='/amil/profile' style="width: 120px;">Profile</button>
+    </div>
+    <button mat-raised-button (click)="logout()" id="logout" style=" color:black; background-color:red;">Keluar</button>
+</mat-toolbar>
+<router-outlet></router-outlet>
+

@@ -1,0 +1,63 @@
+<br>
+<mat-card id="card" style="text-align: center;">
+    
+    <mat-card-title style="padding-top: 15px; padding-bottom:30px;">
+		<img style="width: 80px; height: 80px; display: block;margin-left: auto;margin-right: auto; " src="./assets/47.png"> <br><br>
+      <table>
+        <tr *ngFor="let item of Dataamil">
+      <td style="border:none;  text-align: center; float: none; ">{{item.nama}}</td>
+      </tr>
+      </table>
+	</mat-card-title>
+    <mat-card-content>
+        <table >
+          <tr *ngFor="let item of Dataamil">
+            <td style="border:none;">Nama Lengkap</td>
+            <td>{{item.nama}}</td>
+            <td style="border:none; padding-left: 40px; margin-left: 90px;">Alamat </td>
+            <td>{{item.alamat}}</td>
+          </tr>
+          <tr *ngFor="let item of Dataamil">
+            <td style="border:none;">Jenis Kelamin </td>
+            <td>{{item.Jeniskelamin}}</td>
+            <td style="border:none; padding-left: 40px">Tanggal Masuk </td>
+            <td>{{item.tanggal_masuk}}</td>
+          </tr>
+          <tr *ngFor="let item of Dataamil">
+            <td style="border:none;">Agama</td>
+            <td>{{item.agama}}</td>
+            <td style="border:none; padding-left: 40px">Dokumen CV </td>
+            <td>CV Sita.DOCX</td>
+          </tr>
+          <tr *ngFor="let item of Dataamil">
+            <td style="border:none;">NIK</td>
+            <td>{{item.nik}}</td>
+            <td style="border:none; padding-left: 40px">Passport </td>
+            <td>Passport Sita.DOCX</td>
+          </tr>
+          <tr *ngFor="let item of Dataamil">
+            <td style="border:none;">Jabatan</td>
+            <td>{{item.Jabatan}}</td>
+            <td style="border:none; padding-left: 40px">BPJS Ketenagakerjaan :</td>
+            <td>BPJS Kerja.DOCX</td>
+          </tr>
+          <tr *ngFor="let item of Dataamil"> 
+            <td style="border:none;">Dokumen NBM</td>
+            <td>Download</td>
+            <td style="border:none; padding-left: 40px">BPJS Kesehatan :</td>
+            <td>BPJS Sehat.DOCX</td>
+          </tr>
+          <tr *ngFor="let item of Dataamil">
+            <td style="border:none;">NIA</td>
+            <td>12.345. 678.9-123.123.</td>
+            <td style="border:none;" ></td>
+            <td style="border:none; text-align: right;">
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#edit" (click)="dialogEdit(item)">Edit</button>
+            </td>
+          </tr>
+          
+          
+          
+        </table>
+    </mat-card-content>
+</mat-card>

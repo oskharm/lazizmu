@@ -22,13 +22,15 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   data:any={};
   login() {
     this.Auth.signInWithEmailAndPassword(this.email, this.password).then(res => {
-      this.router.navigate(['/beranda-amil']);
+      this.router.navigate(['/amil']);
     }).catch(error => {
       alert('Email atau password salah');
     })
   }
+
 
  }

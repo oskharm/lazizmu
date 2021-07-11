@@ -1,0 +1,20 @@
+
+mat-toolbar{
+    background: #ffffff ;
+}
+
+body{
+    background: #EBEBEB;
+}
+#logout{
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+}
+.navbar{
+
+    float: none;
+    position: center;
+   
+    
+}

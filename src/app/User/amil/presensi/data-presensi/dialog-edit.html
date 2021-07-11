@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Edit Data Buku</h1>
+<div mat-dialog-content>
+  <div mat-dialog-content >
+    <div class="uk-margin" >
+      <label class="uk-form-label">Rencana Kerja</label>
+      <div class="uk-form-controls">
+        <select class="uk-select" [(ngModel)]="item.rencana">
+            <option *ngFor="let item of Datapres" value="{{n.rencana}}">{{n.rencana}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="uk-margin" >
+      <label class="uk-form-label">Output Kerja</label>
+      <div class="uk-form-controls">
+        <select class="uk-select" [(ngModel)]="item.output">
+            <option *ngFor="let n of Datapres" value="{{n.output}}">{{n.output}}</option>
+        </select>
+      </div>
+    </div>
+      
+    <div mat-dialog-actions class="uk-flex">
+        <span class="uk-width-expand"></span>
+        <button type="button" class="btn btn-secondary" (click)="onNoClick()">Tutup</button>
+        <button type="button" class="btn btn-primary" (click)="editData()">Edit</button>
+    </div>
+    

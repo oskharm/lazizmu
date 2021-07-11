@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'app-beranda-amil',
-  templateUrl: './beranda-amil.component.html',
-  styleUrls: ['./beranda-amil.component.css'],
+  selector: 'app-beranda-admin',
+  templateUrl: './beranda-admin.component.html',
+  styleUrls: ['./beranda-admin.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class BerandaAmilComponent implements OnInit {
+export class BerandaAdminComponent implements OnInit {
 
   constructor() { }
 

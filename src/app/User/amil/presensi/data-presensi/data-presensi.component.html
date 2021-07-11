@@ -1,0 +1,22 @@
+<table class="table1">
+    <tr>
+      <th>Nama</th>
+      <th>Datang</th>
+      <th>Pulang</th>
+      <th>Rencana Kerja</th>
+      <th>Output Kerja</th>
+      <th>AKSI</th>
+    </tr>
+    <tr *ngFor="let item of Datapres">
+      <td>{{item.nama}}</td>
+      <td>{{item.datang}}</td>
+      <td>{{item.pulang}}</td>
+      <td>{{item.rencana}}</td>
+      <td>{{item.output}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" data-toggle="modal"  style="margin-right: 3px;" >Detail</button>
+        <button type="button" class="btn btn-success" data-toggle="modal">Edit</button>
+        <button type="button" class="btn btn-danger" data-toggle="modal" (click)="hapus(item.id)" style="margin-left: 3px;">Hapus</button>
+        </td>
+    </tr>
+  </table>	
