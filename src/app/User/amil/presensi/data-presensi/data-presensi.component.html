@@ -14,9 +14,9 @@
       <td>{{item.rencana}}</td>
       <td>{{item.output}}</td>
       <td>
-        <button type="button" class="btn btn-primary" data-toggle="modal"  style="margin-right: 3px;" >Detail</button>
-        <button type="button" class="btn btn-success" data-toggle="modal">Edit</button>
-        <button type="button" class="btn btn-danger" data-toggle="modal" (click)="hapus(item.id)" style="margin-left: 3px;">Hapus</button>
+        <button mat-raised-button style="height: 30px auto; color: white; background-color:#15e215;margin-right: 3px ;" >Detail</button>
+        <button mat-raised-button style="height: 30px auto;  color: white; background-color:#007BFF;margin-right: 5px ;margin-left: 5px;">Edit</button>
+        <button mat-raised-button style="height: 30px auto;  color: white; background-color:#FF0000;margin-right: 5px ;" (click)="hapus(item.id)">Hapus</button>
         </td>
     </tr>
   </table>	
