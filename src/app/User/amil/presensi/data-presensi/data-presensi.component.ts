@@ -13,7 +13,7 @@ import "firebase/auth";
 export class DataPresensiComponent implements OnInit {
 
   Datapres: any = [];
-  timestamp: any;
+  
   loading: boolean = false;
 
   constructor(

@@ -9,13 +9,11 @@
     </tr>
     <tr *ngFor="let item of Datapres">
       <td>{{item.nama}}</td>
-      <td>{{item.datang}}</td>
-      <td>{{item.pulang}}</td>
+      <td>{{item.waktu.toDate()|date:'dd/MMM/YYY HH:MM:SS'}}</td>
+      <td>{{item.pulang.toDate()|date:'dd/MMM/YYY HH:MM:SS'}}</td>
       <td>{{item.rencana}}</td>
       <td>{{item.output}}</td>
       <td>
-        <button mat-raised-button style="height: 30px auto; color: white; background-color:#15e215;margin-right: 3px ;" >Detail</button>
-        <button mat-raised-button style="height: 30px auto;  color: white; background-color:#007BFF;margin-right: 5px ;margin-left: 5px;">Edit</button>
         <button mat-raised-button style="height: 30px auto;  color: white; background-color:#FF0000;margin-right: 5px ;" (click)="hapus(item.id)">Hapus</button>
         </td>
     </tr>

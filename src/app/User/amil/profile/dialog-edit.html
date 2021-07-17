@@ -1,53 +1,35 @@
 <h3 mat-dialog-title>EDIT PROFIL</h3>
-<div mat-dialog-content>
-    <mat-form-field style="width: 100%;">
-        <mat-label>Nama Lengkap</mat-label>
-        <input matInput >
-    </mat-form-field>
 
-    <mat-form-field style="width: 100%;">
-        <mat-label>Jenis Kelamin</mat-label>
-        <input matInput >
-    </mat-form-field>
+  <label>Nama</label><br>
+  <mat-form-field appearance="outline" style="width: 100%; border: 5px;">
+        <input matInput type="text" [(ngModel)]="data.nama">
+  </mat-form-field><br>
 
-    <mat-form-field style="width: 100%;">
-        <mat-label>Agama</mat-label>
-        <input matInput >
-    </mat-form-field>
+  <label>Jenis Kelamin</label><br>
+  <mat-form-field appearance="outline" style="width: 100%; border: 5px;">
+        <input matInput [(ngModel)]="data.Jeniskelamin">
+  </mat-form-field><br>
 
-    <mat-form-field style="width: 100%;">
-        <mat-label>NIK</mat-label>
-        <input matInput >
-    </mat-form-field>
+  <label>Agama</label><br>
+  <mat-form-field appearance="outline" style="width: 100%; border: 5px;">
+      <input matInput [(ngModel)]="data.agama">
+  </mat-form-field><br>
 
-    <mat-form-field style="width: 100%;">
-        <mat-label>Jabatan</mat-label>
-        <input matInput >
-    </mat-form-field>
+  <label>NIK</label><br>
+  <mat-form-field appearance="outline" style="width: 100%; border: 5px;">
+      <input matInput [(ngModel)]="data.nik">
+  </mat-form-field><br>
+  
+  <label>Jabatan</label><br>
+  <mat-form-field appearance="outline" style="width: 100%; border: 5px;">
+      <input matInput [(ngModel)]="data.Jabatan">
+  </mat-form-field><br>
 
-    <mat-form-field style="width: 100%;">
-        <mat-label>Alamat</mat-label>
-        <input matInput >
-    </mat-form-field>
+  <label>Alamat</label><br>
+  <mat-form-field appearance="outline" style="width: 100%; border: 5px;">
+      <input matInput [(ngModel)]="data.alamat">
+  </mat-form-field><br>
 
-    <mat-form-field style="width: 100%;">
-        <mat-label>Tanggal Masuk</mat-label>
-        <input matInput >
-    </mat-form-field>
-    <mat-form-field style="width: 100%;">
-        <mat-label>Dokumen CV</mat-label>
-        <input matInput >
-    </mat-form-field>
-    <mat-form-field style="width: 100%;">
-        <mat-label>Tanggal Masuk</mat-label>
-        <input matInput >
-    </mat-form-field><mat-form-field style="width: 100%;">
-        <mat-label>NIA</mat-label>
-        <input matInput >
-    </mat-form-field>
-</div>
-    <div mat-dialog-actions class="uk-flex">
-        <span class="uk-width-expand"></span>
-        <button mat-raised-button style="height: 30px auto;  color: white; background-color:#FF0000;">Batal</button>
-        <button mat-raised-button style="height: 30px auto;  color: white; background-color:#15e215;">Simpan</button>
-    </div>
+<button mat-raised-button style="height: 30px auto;  color: white; background-color:#FF0000; margin-right: 10px;"(click)="onNoClick()">Batal</button>
+<button mat-raised-button style="height: 30px auto;  color: white; background-color:#15e215;" (click)="editData()">Simpan</button>
+ 

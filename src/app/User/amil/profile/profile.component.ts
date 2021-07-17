@@ -71,7 +71,7 @@ loading: boolean = false;
   editData(){
     this.loading = true;
     if (this.data != null) {
-      this.db.collection('amil').doc(this.data.id_amil).update(this.data).then(res => {
+      this.db.collection('amil').doc(this.data.id).update(this.data).then(res => {
         alert('Data berhasil diperbarui.');
         this.dialogRef.close();
       })

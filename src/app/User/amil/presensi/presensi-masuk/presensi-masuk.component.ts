@@ -2,6 +2,8 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import firebase from 'firebase';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-presensi-masuk',
@@ -33,19 +35,36 @@ export class PresensiMasukComponent implements OnInit {
   templateUrl: 'dialog-tambah-masuk.html',
 })
 export class DialogTambahData {
-  data: any;
+  datapresensi: any = {};
 
-loading: boolean = false;
+  loading: boolean = false;
   constructor(
     public dialogRef: MatDialogRef<DialogTambahData>,
     public db: AngularFirestore,
     private router:Router,
     private route: ActivatedRoute,
     @Inject(MAT_DIALOG_DATA) public sourceData: any
-  ){
-    if (sourceData.data != null) {
-      this.data = sourceData.data;
+  ){}
+ 
+  
+  addData() {
+    this.loading = true;
+    var id_presensi = this.datapresensi.id;
+    var dt = {
+
+     id_presensi: this.datapresensi.id,
+     nama: this.datapresensi.nama,
+     rencana: this.datapresensi.rencana,
+     output: this.datapresensi.output,
+    
+     waktu: new Date()
+     
     }
+    this.db.collection('presensi').doc(id_presensi).set(dt).then(res => {
+      this.loading = false;
+      alert('Data berhasil di tambahkan');
+      window.location.reload();
+    })
   }
   onNoClick(): void {
     this.dialogRef.close();

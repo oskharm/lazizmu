@@ -1,27 +1,26 @@
 <h3 mat-dialog-title>Tambah Presensi Masuk</h3>
 <div mat-dialog-content>
-    <mat-form-field style="width: 100%;">
-        <mat-label>Nama Lokasi</mat-label>
-        <input matInput >
-    </mat-form-field>
 
-    <mat-form-field style="width: 100%;">
-        <mat-label>Radius</mat-label>
-        <input matInput >
-    </mat-form-field>
+    <label>ID Presensi</label><br>
+    <mat-form-field appearance="outline" style="width: 100%; border: 5px;">
+        <input matInput type="text" [(ngModel)]="datapresensi.id" placeholder="ID Presensi">
+    </mat-form-field><br>
 
-    <mat-form-field style="width: 100%;">
-        <mat-label>Waktu Pulang</mat-label>
-        <input matInput >
-    </mat-form-field>
+    <label>Nama</label><br>
+    <mat-form-field appearance="outline" style="width: 100%; border: 5px;">
+        <input matInput type="text" [(ngModel)]="datapresensi.nama" placeholder="Nama">
+    </mat-form-field><br>
 
-    <mat-form-field style="width: 100%;">
-        <mat-label>Alamat Lengkap</mat-label>
-        <input matInput >
-    </mat-form-field>
+    <label>Rencana</label><br>
+    <mat-form-field appearance="outline" style="width: 70%; border: 5px;">
+        <input matInput type="text" [(ngModel)]="datapresensi.rencana" placeholder="Rencana">
+    </mat-form-field><br>
+
+    <label>Output</label><br>
+    <mat-form-field appearance="outline" style="width: 70%; border: 5px;">
+        <input matInput type="text" [(ngModel)]="datapresensi.output" placeholder="Output">
+    </mat-form-field><br>
+
 </div>
-    <div mat-dialog-actions class="uk-flex">
-        <span class="uk-width-expand"></span>
-        <button  mat-raised-button style="height: 30px auto; margin-top: 70px; color: white; background-color:#FF0000;" (click)="onNoClick()">Batal</button>
-        <button  mat-raised-button style="height: 30px auto; margin-top: 70px; color: white; background-color:#007BFF;">Presensi</button>
-    </div>
+    <button  mat-raised-button style="height: 30px auto; margin-top: 70px; color: white; background-color:#FF0000; margin-right: 10px;" (click)="onNoClick()">Batal</button>
+    <button  mat-raised-button style="height: 30px auto; margin-top: 70px; color: white; background-color:#007BFF;" (click)="addData()">Presensi</button>

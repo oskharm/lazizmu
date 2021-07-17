@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import firebase from 'firebase';
 
 @Component({
   selector: 'app-presensi-pulang',
@@ -36,9 +37,9 @@ export class PresensiPulangComponent implements OnInit {
   selector: 'dialog-container',
   templateUrl: 'dialog-tambah-pulang.html',
 })
-export class DialogTambah {
-  data: any;
-
+export class DialogTambah { 
+  datapresensi: any = {};
+timestamp: any;
 loading: boolean = false;
   constructor(
     public dialogRef: MatDialogRef<DialogTambah>,
@@ -46,10 +47,19 @@ loading: boolean = false;
     private router:Router,
     private route: ActivatedRoute,
     @Inject(MAT_DIALOG_DATA) public sourceData: any
-  ){
-    if (sourceData.data != null) {
-      this.data = sourceData.data;
+  ){}
+  addData() {
+    this.loading = true;
+    var id_presensi = this.datapresensi.id;
+    var dt = {
+     id_presensi: this.datapresensi.id,
+     pulang: firebase.firestore.FieldValue.serverTimestamp()
     }
+    this.db.collection('presensi').doc(id_presensi).update(dt).then(res => {
+      this.loading = false;
+      alert('Data berhasil di tambahkan');
+      window.location.reload();
+    })
   }
   onNoClick(): void {
     this.dialogRef.close();
